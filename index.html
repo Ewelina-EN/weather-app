@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecast</title>
+    <link rel="icon" href="images/logo.png" />
+    <link href="css/style.css" rel="stylesheet" />
+    <script defer src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="container">
+    <section class="search column">
+      <header class="header">Weather App</header>
+      <form class="form">
+        <input
+          class="form_location"
+          type="text"
+          placeholder="Please enter a city"
+          id="cityinput"
+        />
+        <input
+          class="form_button"
+          type="submit"
+          name="search"
+          value="Search"
+          id="add"
+        />
+        <div class="separator"></div>
+        <button class="form_button" id="button_loc">Use My Location</button>
+      </form>
+    </section>
+
+    <section id="weather" class="wth_section column hidden">
+      <div id="wth_icon" class="wth_icon"></div>
+      <div id="temp" class="deg"></div>
+      <h2 id="city" class="city"></h2>
+      <p id="description" class="descr"></p>
+      <div class="details">
+        <span id="pressure" class="pressure"></span>
+        <span id="wind" class="wind"></span>
+      </div>
+    </section>
+    <section id="error" class="wth_section error hidden"></section>
+    <!-- <div class="boxLoading"></div> -->
+  </body>
+  <footer class="footer">
+    <a href=" mailto: nieweglowska.ewelina@gmail.com"
+      ><img src="/css/images/emailicon.png" width="20px"
+    /></a>
+    2022 Created by EN
+  </footer>
+</html>
