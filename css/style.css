@@ -1,192 +1,208 @@
 html {
-    display: block;
+  display: block;
 }
 
-*, ::after, ::before {
-    box-sizing: border-box;
-    font-family: 'Comfortaa';
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  font-family: "Comfortaa";
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    margin: 20px;
-    padding: 20px;
-    background-color: #7BCBF4;
-    max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px;
+  padding: 20px;
+  background-color: #7bcbf4;
+  max-width: 100%;
 }
 
 .search {
-    background-color: #fff;
-    border-radius: 7px;
-    margin: 10px;
-    box-shadow: 0 0 10px #2e5a87c8;
-
+  background-color: #fff;
+  border-radius: 7px;
+  margin: 10px;
+  box-shadow: 0 0 10px #2e5a87c8;
 }
 
 .header {
-    display: flex;
-    font-size: 21px;
-    font-weight: bold;
-    color: #43AFFC;
-    padding: 16px 15px;
-    align-items: center;
-    border-bottom: 1px solid #ccc;
-    box-shadow: #777777;
-
+  display: flex;
+  font-size: 21px;
+  font-weight: bold;
+  color: #43affc;
+  padding: 16px 15px;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  box-shadow: #777777;
 }
 
 .form {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    padding: 10px;
-    box-shadow: 10px #777777;
-    width: 335px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 10px;
+  box-shadow: 10px #777777;
+  width: 335px;
 }
 
 .form_location {
-    flex-basis: 75%;
-    flex-grow: 1;
-    font-weight: 600;
-    margin: 10px;
-    padding: 10px;
-    text-align: center;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 15px;
+  flex-basis: 75%;
+  flex-grow: 1;
+  font-weight: 600;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 15px;
 }
 
 .form_button {
-    flex-grow: 1;
-    padding: 10px;
-    margin: 10px;
-    cursor: pointer;
-    font-weight: bold;
-    background-color: #43AFFC;
-    color: #fff;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 15px;
+  flex-grow: 1;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #43affc;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 15px;
 }
 
 .form_button:hover {
-    transition: 1s;
-    background-color: hsl(211, 58%, 54%);
-    transform: scale(1.03);
+  transition: 1s;
+  background-color: hsl(211, 58%, 54%);
+  transform: scale(1.03);
 }
 
 .form_button:active {
-    background-color: hsl(211, 58%, 45%);
+  background-color: hsl(211, 58%, 45%);
 }
 
-.separator{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 1px;
-    width: 100%;
-    background: #ccc;
+.separator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 1px;
+  width: 100%;
+  background: #ccc;
 }
 
-.separator::before{
-    content: "or";
-    color: #b3b3b3;
-    font-size: 15px;
-    padding: 0 15px;
-    background: #fff;
+.separator::before {
+  content: "or";
+  color: #b3b3b3;
+  font-size: 15px;
+  padding: 0 15px;
+  background: #fff;
 }
 
 .city {
-    display: flex;
-    font-size: bold;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    color: black;
-    font-weight: bold;
+  display: flex;
+  font-size: bold;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: black;
+  font-weight: bold;
 }
 
 .wth_section {
-    display: flex;
-    flex-direction: column;
-    width: 335px;
-    background-color: #fff;
-    border-radius: 7px;
-    box-shadow: 0 0 10px #2e5a87c8;
-    margin: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 335px;
+  background-color: #fff;
+  border-radius: 7px;
+  box-shadow: 0 0 10px #2e5a87c8;
+  margin: 10px;
 }
 
 .wth_icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
 }
 
 .deg {
-    display: flex;
-    font-size: 50px;
-    font-weight: bold;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  font-size: 50px;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
 }
 
 .descr {
-    text-align: center;
-    padding: 5px;
-    font-size: 21px;
-    margin: 5px 20px 15px;
+  text-align: center;
+  padding: 5px;
+  font-size: 21px;
+  margin: 5px 20px 15px;
 }
 
 .details {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    border-top: 1px solid #ccc;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  border-top: 1px solid #ccc;
 }
 
 .pressure {
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    align-items: center;
-    padding: 15px 0;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  align-items: center;
+  padding: 15px 0;
 }
 
 .wind {
-    display: flex;
-    width: 100%;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 15px 0;
-    border-left: 1px solid #ccc;
-}
-
-.boxLoading {
-    width: 400px;
-    height: 200px;
-    background-color: #fff;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 15px 0;
+  border-left: 1px solid #ccc;
 }
 
 .hidden {
-    display: none;
-    box-shadow: 0 0 10px #2e5a87c8;
+  display: none;
+  box-shadow: 0 0 10px #2e5a87c8;
 }
 
-.error{
-    padding: 20px;
-    align-items: center;
-    font-weight: bold;
+.error {
+  padding: 20px;
+  align-items: center;
+  font-weight: bold;
 }
 
-.footer{
-    position: fixed;
-    height: 40px;
-    bottom: 0;
-    color: whitesmoke;
-    font-weight: bold;
+.footer {
+  position: fixed;
+  height: 40px;
+  bottom: 0;
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+.info_part {
+  margin: 20px 25px 30px;
+}
+
+/* .info_txt {
+  color: #721c24;
+  background-color: #f8d7f8;
+  border: 1px solid #f5c6cb;
+} */
+
+.info_txt.error {
+  color: #721c24;
+  background-color: #f8d7f8;
+  border: 1px solid #f5c6cb;
+}
+.info_txt.pending {
+  display: block;
+  color: #0c5460;
+  background-color: #d1ecf1;
+  border: 1px solid #bee5eb;
 }
