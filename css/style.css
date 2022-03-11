@@ -13,7 +13,6 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   margin: 20px;
   padding: 20px;
   background-color: #7bcbf4;
@@ -28,7 +27,6 @@ html {
 }
 
 .header {
-  display: flex;
   font-size: 21px;
   font-weight: bold;
   color: #43affc;
@@ -101,10 +99,7 @@ html {
 }
 
 .city {
-  display: flex;
   font-size: bold;
-  align-items: center;
-  justify-content: center;
   font-weight: 700;
   color: black;
   font-weight: bold;
@@ -113,6 +108,7 @@ html {
 .wth_section {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 335px;
   background-color: #fff;
   border-radius: 7px;
@@ -128,7 +124,6 @@ html {
 }
 
 .deg {
-  display: flex;
   font-size: 50px;
   font-weight: bold;
   align-items: center;
@@ -178,24 +173,32 @@ html {
 }
 
 .footer {
+  display: flex;
   position: fixed;
-  height: 40px;
   bottom: 0;
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
   color: whitesmoke;
   font-weight: bold;
 }
 
-.info_part {
-  margin: 20px 25px 30px;
+.info_txt {
+  display: none;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 0;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-size: 15px;
 }
 
-/* .info_txt {
-  color: #721c24;
-  background-color: #f8d7f8;
-  border: 1px solid #f5c6cb;
-} */
-
 .info_txt.error {
+  display: block;
   color: #721c24;
   background-color: #f8d7f8;
   border: 1px solid #f5c6cb;
