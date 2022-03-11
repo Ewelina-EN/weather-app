@@ -6,7 +6,6 @@ let pressure = document.getElementById("pressure");
 let wind = document.getElementById("wind");
 let button = document.getElementById("add");
 let wthIcon = document.getElementById("wth_icon");
-// document.getElementById("weather").innerHTML = loader;
 const weather = document.getElementById("weather");
 const errorBox = document.getElementById("error");
 const locationBtn = document.getElementById("button_loc");
@@ -15,24 +14,9 @@ const API_settings =
   "appid=0c4f2607e0804404144f0b1b16a29ef8&mode=json&lang=en&units=metric&";
 const APIUrl = `https://api.openweathermap.org/data/2.5/weather?${API_settings}`;
 
-// locationBtn.addEventListener("click", (event) => {
-//   event.preventDefault();
-//   loading.classList.add("hidden");
-//   if (navigator.geolocation) {
-//     navigator.geolocation.getCurrentPosition(
-//       function (data) {
-//         console.log("data", data);
-//       },
-//       function (err) {
-//         alert(err);
-//       }
-//     );
-//   } else {
-//     alert("Your browser not support geolocation api");
-//   }
-// });
-
-locationBtn.addEventListener("click", (event) => {
+locationBtn.addEventListener("click", function (event) {
+  infoTxt.innerText = "Getting weather details...";
+  infoTxt.classList.add("pending");
   event.preventDefault();
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(onSuccess, onError);
@@ -48,14 +32,12 @@ function onSuccess(position) {
 }
 
 function onError(error) {
+  console.log("locEr", error);
   infoTxt.innerText = error.message;
   infoTxt.classList.add("error");
 }
 
 function fetchData(url) {
-  infoTxt.innerText = "Getting weather details...";
-  infoTxt.classList.add("pending");
-  // fetch(APISearchUrl + inputval.value)
   fetch(url)
     .then((response) => responseApi(response))
     .then((data) => weatherDetails(data))
@@ -77,7 +59,6 @@ function responseApi(response) {
 }
 
 function catchError(error) {
-  console.log("error", error);
   errorBox.classList.remove("hidden");
   switch (error.cause.status) {
     case 404:
@@ -92,7 +73,6 @@ function catchError(error) {
 }
 
 function weatherDetails(data) {
-  console.log("response", data);
   weather.classList.remove("hidden");
   loc.innerHTML = data.name + "," + " " + data.sys.country;
   temp.innerHTML = Math.round(data.main.temp) + " " + "°C";
