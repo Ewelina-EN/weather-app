@@ -78,16 +78,16 @@ function weatherDetails(data) {
   temp.innerHTML = Math.round(data.main.temp) + " " + "°C";
   description.innerHTML = data.weather[0].description;
   pressure.innerHTML =
-    `<img src="/css/images/thermometer.png" width="30" heigth="30">` +
+    `<img src="./css/images/thermometer.png" width="30" heigth="30">` +
     " " +
     data.main.pressure +
     " " +
     "hPa";
   wind.innerHTML =
-    `<img src="/css/images/wind.png" width="30" heigth="30">` +
+    `<img src="./css/images/wind.png" width="30" heigth="30">` +
     data.wind.speed +
     " " +
     "km/h";
   const icon = data.weather[0].icon;
-  wthIcon.innerHTML = `<img src="/css/icons/${icon}.png" >`;
+  wthIcon.innerHTML = `<img src="./css/icons/${icon}.png" >`;
 }
